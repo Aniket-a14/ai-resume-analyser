@@ -116,6 +116,10 @@ form {
   }
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 @utility bg-gradient {
   background: linear-gradient(to bottom, #f0f4ff 60%, #fa7185cc);
 }
