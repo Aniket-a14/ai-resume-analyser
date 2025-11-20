@@ -1,40 +1,58 @@
-# Welcome to React Router!
+# Resume Tuner
 
-A modern, production-ready template for building full-stack React applications using React Router.
+**Smart feedback for your dream job.**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Resume Tuner is an AI-powered application designed to help job seekers optimize their resumes for specific job descriptions. By analyzing your resume against a target job role, it provides an ATS (Applicant Tracking System) score, actionable feedback, and detailed suggestions to improve your chances of getting hired.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+-   **AI-Powered Analysis**: Utilizes advanced AI to analyze your resume content in the context of the job you're applying for.
+-   **ATS Scoring System**: Get a concrete score (0-100) representing how well your resume matches the job description.
+-   **Job Description Matching**: Tailored feedback based on the specific requirements of the job title and description you provide.
+-   **Visual Score Gauges**: Easy-to-understand visual indicators for your overall score and key metrics.
+-   **History Tracking**: Automatically saves your past analyses so you can track your improvements over time.
+-   **Privacy-Focused**: Built on Puter.js, ensuring your data is handled securely.
+
+## Tech Stack
+
+-   **Framework**: [React Router v7](https://reactrouter.com/)
+-   **UI Library**: [React 19](https://react.dev/)
+-   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+-   **Backend/Cloud**: [Puter.js](https://puter.com/) (File System, Key-Value Store, AI)
+-   **PDF Processing**: [PDF.js](https://mozilla.github.io/pdf.js/)
+-   **State Management**: [Zustand](https://github.com/pmndrs/zustand)
 
 ## Getting Started
 
+### Prerequisites
+
+-   Node.js (v20 or later recommended)
+-   npm
+
 ### Installation
 
-Install the dependencies:
+1.  Clone the repository:
+    ```bash
+    git clone <repository-url>
+    cd ai-resume-analyser
+    ```
 
-```bash
-npm install
-```
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
 
 ### Development
 
-Start the development server with HMR:
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The application will be available at `http://localhost:5173`.
 
-## Building for Production
+### Building for Production
 
 Create a production build:
 
@@ -42,46 +60,25 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
+### Deployment
 
-### Docker Deployment
+You can deploy this application to any platform that supports Node.js or Docker.
 
-To build and run using Docker:
+#### Docker
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+docker build -t resume-tuner .
+docker run -p 3000:3000 resume-tuner
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## Usage
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+1.  **Sign In**: Log in using your Puter account.
+2.  **Upload**: Click "Upload Resume" or drag and drop your PDF resume.
+3.  **Details**: Enter the Company Name, Job Title, and Job Description for the role you are targeting.
+4.  **Analyze**: Click "Analyze Resume" and wait for the AI to process your document.
+5.  **Review**: View your ATS score, summary, and detailed improvement tips.
 
 ---
 
-Built with ❤️ using React Router.
+Built with ❤️ using React Router and Puter.js.
